@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="d-flex justify-content-center align-items-center mt-3">
+    <div class="login d-flex justify-content-center align-items-end gap-2" id="login-container">
+        <button class="admin" id="login-admin">Admin</button>
+        <button class="regularUser" id="login-user">User</button>
+    </div>
+</div>
+<div id="admin-panel" class="hidden admin-panel">
+    <h2>Add movie</h2>
+    <input type="text" id="movie-title" placeholder="Movie Title">
+    <input type="text" id="movie-image" placeholder="Movie Image URL">
+    <input type="number" id="movie-seats" placeholder="Number of Seats">
+    <button class="add-movie-btn" id="add-movie-btn">Add Movie</button>
+</div>
+
+<h2 class="font-30 hidden  " id="movies-list">Movies list</h2>
+<div class="d-flex flex-wrap font text-center  " id="movies-container"></div>
+
+
+<div id="reservation-screen" class="hidden p-2 ">
+    <div class="book gap-3 ">
+        <div class="left flex1 ">
+            <h2 class="justify-content-center  d-flex font-30" id="movie-title-display"></h2>
+            <div class="justify-content-center d-flex align-items-center">
+                <img id="movie-image-display" src="" alt="">
+            </div>
+        </div>
+        <div class="right flex2 flex-wrap ">
+            <div class="screen  mb-5">Screen</div>
+            <div class="d-flex flex-wrap " id="seats-container"></div>
+            <button class="reserve-btn mb-3 mt-3" id="reserve-btn">Reserve</button>
+            <button class="delete-reservation-btn" id="delete-reservation-btn">Delete</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
